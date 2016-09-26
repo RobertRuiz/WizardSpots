@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require 'bootstrap'
 //= require 'cable'
-//= require 'contact_me'
-//= require 'jqBootstrapValidation'
 //= require 'drop-down-hover'
 //= require 'carousel'
 //= require_tree .
