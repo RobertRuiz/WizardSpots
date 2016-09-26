@@ -60,3 +60,9 @@ gem 'omniauth-github'
 
 # Environment
 gem 'dotenv-rails'
+
+# Heroku deployment
+gem 'rails_12factor', group: :production
+
+# specify Ruby version
+ruby "2.3.1"
