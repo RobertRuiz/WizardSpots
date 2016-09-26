@@ -1,3 +1,6 @@
+# specify Ruby version
+ruby "2.3.1"
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -50,7 +53,6 @@ gem 'font-awesome-rails'
 
 # Authentication via oauth
 gem 'omniauth'
-gem 'dotenv-rails'
 
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
@@ -63,6 +65,3 @@ gem 'dotenv-rails'
 
 # Heroku deployment
 gem 'rails_12factor', group: :production
-
-# specify Ruby version
-ruby "2.3.1"

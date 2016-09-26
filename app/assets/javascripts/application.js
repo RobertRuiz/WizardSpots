@@ -17,7 +17,6 @@
 //= require 'cable'
 //= require 'contact_me'
 //= require 'jqBootstrapValidation'
-//= require 'main'
 //= require 'drop-down-hover'
 //= require 'carousel'
 //= require_tree .
