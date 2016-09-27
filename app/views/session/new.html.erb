@@ -9,15 +9,15 @@
       Sign in with Twitter
   <% end %>
 
-  <%= link_to auth_path(provider: 'google'), :class => "btn btn-social btn-google" do %>
-      <span class="fa fa-google"></span>
-      Sign in with Google
+  <%= link_to auth_path(provider: 'amazon'), :class => "btn btn-social btn-amazon" do %>
+      <span class="fa fa-amazon"></span>
+      Sign in with Amazon
   <% end %>
 
-  <%= link_to auth_path(provider: 'paypal'), :class => "btn btn-social btn-paypal" do %>
+  <!-- <%= link_to auth_path(provider: 'paypal'), :class => "btn btn-social btn-paypal" do %>
       <span class="fa fa-paypal"></span>
       Sign in with Paypal
-  <% end %>
+  <% end %> -->
 
   <%= link_to auth_path(provider: 'github'), :class => "btn btn-social btn-github" do %>
       <span class="fa fa-github"></span>

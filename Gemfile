@@ -55,9 +55,8 @@ gem 'font-awesome-rails'
 gem 'omniauth'
 
 gem 'omniauth-facebook'
-gem "omniauth-google-oauth2"
+gem "omniauth-amazon"
 gem "omniauth-paypal"
-gem 'omniauth-twitter'
 gem 'omniauth-github'
 
 # Environment
