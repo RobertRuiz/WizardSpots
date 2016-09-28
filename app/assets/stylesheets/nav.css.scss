@@ -13,4 +13,9 @@ body {
 
 .navbar-inverse .navbar-nav > li > a {
     color: black;
+    position: fixed;
+}
+
+.navbar-inverse .navbar-nav .dropdown-toggle .menu {
+    border: 3px solid #73AD21;
 }
