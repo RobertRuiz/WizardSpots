@@ -10,11 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require '_variables'
  *= require 'font-awesome'
  *= require 'bootstrap'
  *= require 'bootstrap-social'
  *= require 'modern-business'
  *= require 'video'
  *= require 'logins'
- *= require '_variables'
+ *= require 'spots'
+ *= require 'nav'
  */

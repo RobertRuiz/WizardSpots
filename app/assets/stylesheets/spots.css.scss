@@ -1,0 +1,15 @@
+.button_ops {
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 200px;
+  margin: auto;
+  list-style: none;
+
+  a {
+    // margin: 20px 0;
+    margin-bottom: 10px;
+  }
+}

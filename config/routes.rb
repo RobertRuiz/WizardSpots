@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spots
   root   'welcome#index'
   get    'welcome/index'
   get    '/auth/:provider'          => 'omniauth#auth', as: :auth
