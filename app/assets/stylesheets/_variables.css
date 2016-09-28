@@ -1,7 +1,6 @@
-/*This is not working*/
-.navbar-header .navbar-brand{
-    max-height: 20px;
-    max-width: 200px;
+.carousel-inner {
+max-width: auto;
+height: 100%;
 }
 
 .footer-left {
