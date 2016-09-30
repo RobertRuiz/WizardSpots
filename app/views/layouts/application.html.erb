@@ -11,53 +11,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-wizardspot" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to image_tag('wizard2.png'), root_path, class: "navbar-brand" %>
-                <%= link_to image_tag('byline1.png'), root_path, class: "navbar-brand" %>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown"> <b class="fa fa-bars fa"></b> Menu </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <%= link_to "Login", login_path %>
-                            </li>
-                            <li>
-                                <%= link_to "Your Spots", spots_path %>
-                            </li>
-                            <li>
-                                <%= link_to "Add a Spot", new_spot_path %>
-                            </li>
-                            <li>
-                                <a href="spotproviders.html">Spot Providers</a>
-                            </li>
-                            <li>
-                                <a href="howitworks.html">How it Works</a>
-                            </li>
-                            <li>
-                                <a href="contactus.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -113,12 +66,61 @@
     </header>
 </head>
 
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-wizardspot" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to image_tag('wizard2.png'), root_path, class: "navbar-brand" %>
+            <%= link_to image_tag('byline1.png'), root_path, class: "navbar-brand" %>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"> <b class="fa fa-bars fa"></b> Menu </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <%= link_to "Login", login_path %>
+                        </li>
+                        <li>
+                            <%= link_to "Your Spots", spots_path %>
+                        </li>
+                        <li>
+                            <%= link_to "Add a Spot", new_spot_path %>
+                        </li>
+                        <li>
+                            <a href="spotproviders.html">Spot Providers</a>
+                        </li>
+                        <li>
+                            <a href="howitworks.html">How it Works</a>
+                        </li>
+                        <li>
+                            <a href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Header Carousel -->
+
+
   <body>
     <div class=“container”>
      <%= yield %>
     </div>
   </body>
-
 <!-- Footer -->
 <footer class="navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
