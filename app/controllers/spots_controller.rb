@@ -1,9 +1,10 @@
 class SpotsController < ApplicationController
+  before_filter :authenticate!
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
 
   # GET /spots
   def index
-    @spots = Spot.all
+    @spots = current_user.spots.all
   end
 
   # GET /spots/1
@@ -12,7 +13,7 @@ class SpotsController < ApplicationController
 
   # GET /spots/new
   def new
-    @spot = Spot.new
+    @spot = current_user.spots.new
   end
 
   # GET /spots/1/edit
@@ -21,7 +22,7 @@ class SpotsController < ApplicationController
 
   # POST /spots
   def create
-    @spot = Spot.new(spot_params)
+    @spot = current_user.spots.new(spot_params)
 
     if @spot.save
       redirect_to @spot, notice: 'Spot was successfully created.'
@@ -48,11 +49,11 @@ class SpotsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_spot
-      @spot = Spot.find(params[:id])
+      @spot = current_user.spots.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def spot_params
-      params.require(:spot).permit(:name, :title, :description, :user_id)
+      params.require(:spot).permit(:name, :title, :description)
     end
 end
