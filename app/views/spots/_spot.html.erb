@@ -1,0 +1,19 @@
+<div class="col-md-3 col-sm-6">
+    <div class="panel panel-default text-center">
+        <div class="panel-heading">
+            <span class="fa-stack fa-5x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div class="panel-body">
+            <h4><%= spot.name %></h4>
+            <p><%= spot.description %></p>
+              <ul class="button_ops">
+                <li><a href="#" class="btn btn-primary">Order now</a></li>
+                <li><%= link_to "Modify this spot", edit_spot_path(spot), class: "btn btn-primary" %></li>
+                <li><%= link_to "Remove this spot", spot_path(spot), { class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } } %></li>
+              </ul>
+        </div>
+    </div>
+</div>
