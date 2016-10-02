@@ -11,9 +11,3 @@ Rails.application.routes.draw do
 
   get '/.well-known/acme-challenge/:id' => 'letsencrypt#challenge'
 end
-
-#  From Brickhaus project
-# devise_scope :user do
-#     get 'user/:id' => 'registrations#show', as: "show_profile"
-#     get 'users'    => 'registrations#index'
-#   end
