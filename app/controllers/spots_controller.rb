@@ -25,7 +25,7 @@ class SpotsController < ApplicationController
     @spot = current_user.spots.new(spot_params)
 
     if @spot.save
-      redirect_to @spot, notice: 'Spot was successfully created.'
+      redirect_to spots_path, alert: 'Spot was successfully created.'
     else
       render :new
     end
@@ -34,7 +34,7 @@ class SpotsController < ApplicationController
   # PATCH/PUT /spots/1
   def update
     if @spot.update(spot_params)
-      redirect_to @spot, notice: 'Spot was successfully updated.'
+      redirect_to spots_path, notice: 'Spot was successfully updated.'
     else
       render :edit
     end
@@ -43,17 +43,17 @@ class SpotsController < ApplicationController
   # DELETE /spots/1
   def destroy
     @spot.destroy
-    redirect_to spots_url, notice: 'Spot was successfully destroyed.'
+    redirect_to spots_path, notice: 'Spot was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_spot
-      @spot = current_user.spots.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_spot
+    @spot = current_user.spots.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def spot_params
-      params.require(:spot).permit(:name, :title, :description, :category_id)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def spot_params
+    params.require(:spot).permit(:name, :title, :description, :category_id)
+  end
 end
