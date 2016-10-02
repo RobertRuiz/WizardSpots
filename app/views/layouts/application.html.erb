@@ -5,11 +5,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Wizard Spots, your wish is our command">
+    <meta name="author" content="Robert S. Ruiz">
     <title>Wizard Spots</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--Begin Bontact Script-->
+        <script type='text/javascript'>
+        var bontactCustomer = 'RTZDUMPFRAF-OJWANDRVWW-ZQYKDVETJQ-ULNNSPXMLL-HVGWMPHBR';
+        var locationRoot = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+        var newElem = document.createElement('script');
+        newElem.setAttribute('src', locationRoot+'dashboard.bontact.com/widget/bontact.script.js');
+        newElem.setAttribute('type', 'text/javascript');
+        document.getElementsByTagName('head')[0].appendChild(newElem);
+        </script>
+    <!--End Bontact Script-->
+
 </head>
 
 <body>
@@ -40,19 +52,16 @@
                               <%= link_to "Login", login_path %>
                           </li>
                           <li>
-                              <%= link_to "Your Spots", spots_path %>
+                              <%= link_to "Logout", logout_path %>
                           </li>
                           <li>
-                              <%= link_to "Add a Spot", new_spot_path %>
+                              <%= link_to "Your Spots", spots_path %>
                           </li>
                           <li>
                               <a href="spotproviders.html">Spot Providers</a>
                           </li>
                           <li>
                               <a href="howitworks.html">How it Works</a>
-                          </li>
-                          <li>
-                              <a href="contactus.html">Contact Us</a>
                           </li>
                       </ul>
                   </li>
@@ -66,7 +75,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="navbar-default navbar-fixed-bottom">
+  <footer class="navbar-default">
       <div class="container-fluid">
           <span>
               <div class="container footer">
