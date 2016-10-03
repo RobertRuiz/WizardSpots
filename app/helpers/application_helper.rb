@@ -17,6 +17,8 @@ module ApplicationHelper
       "fa-money"
     when "music"
       "fa-music"
+    when "calendar"
+      "fa-calendar"
     else
       "fa-check-circle-o"
     end

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-5 col-lg-offset-1">
+  <div class="col-lg-7 col-lg-offset-0">
     <%= form_for(spot, html: { class: "form-horizontal", role: "form" }) do |f| %>
       <% if spot.errors.any? %>
         <div class="alert alert-danger alert-dismissable" role="alert">
@@ -29,7 +29,8 @@
       <div class="form-group">
         <%= f.label :description, class: "col-sm-2 control-label" %>
         <div class="col-sm-10">
-          <%= f.text_area :description, class: "form-control" %>
+          <%= f.text_area :description, class: "form-control", rows: "5" %>
+
         </div>
       </div>
 
@@ -53,8 +54,11 @@
     <% end %>
   </div>
 
-  <div class="col-lg-5">
+  <div class="col-lg-4">
     <div class="list-group spots-list">
+      <p>
+        <h3>Select and modify an exisiting spot: </h3>
+      </p>
       <% SpotTemplate.all.each do |spot_template| %>
         <a href='#' class="list-group-item spot-template" data-spot-template="<%= spot_template.to_json %>">
           <span class="fa-stack">
