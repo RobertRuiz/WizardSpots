@@ -25,7 +25,7 @@ class SpotsController < ApplicationController
     @spot = current_user.spots.new(spot_params)
 
     if @spot.save
-      redirect_to spots_path, alert: 'Spot was successfully created.'
+      redirect_to spots_path, notice: 'Spot was successfully created.'
     else
       render :new
     end
@@ -43,7 +43,7 @@ class SpotsController < ApplicationController
   # DELETE /spots/1
   def destroy
     @spot.destroy
-    redirect_to spots_path, notice: 'Spot was successfully destroyed.'
+    redirect_to spots_path, notice: 'Spot was successfully deleted from your account.'
   end
 
   private

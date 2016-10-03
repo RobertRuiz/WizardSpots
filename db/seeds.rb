@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.find_or_create_by(name: "food")
-Category.find_or_create_by(name: "social")
+Category.find_or_create_by(name: "facebook")
+Category.find_or_create_by(name: "messaging")
 Category.find_or_create_by(name: "automotive")
 Category.find_or_create_by(name: "home")
+Category.find_or_create_by(name: "other")
+Category.find_or_create_by(name: "email")
+Category.find_or_create_by(name: "finance")
+Category.find_or_create_by(name: "music")
