@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 201_610_022_020_33) do
+ActiveRecord::Schema.define(version: 20161003153434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 201_610_022_020_33) do
   create_table "logins", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "spot_templates", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_spot_templates_on_category_id", using: :btree
   end
 
   create_table "spots", force: :cascade do |t|
@@ -48,6 +57,7 @@ ActiveRecord::Schema.define(version: 201_610_022_020_33) do
     t.datetime "updated_at",   null: false
   end
 
+  add_foreign_key "spot_templates", "categories"
   add_foreign_key "spots", "categories"
   add_foreign_key "spots", "users"
 end
