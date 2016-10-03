@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("turbolinks:load", function() {
   $(".spot-template").on("click", function(event) {
     event.preventDefault();
 
