@@ -48,7 +48,7 @@
     <% else %>
       <% if @approved_spots.any? %>
         <div class="well">
-          <h1><span class="label label-success"><%= pluralize(@approved_spots.count, "Approved Spot") %></span></h1>
+          <h1><span class="label label-success"><%= pluralize(@approved_spots.count, "Approved Spots") %></span></h1>
           <div class="row spots-list">
             <%= render @approved_spots %>
           </div>
@@ -56,7 +56,7 @@
       <% end %>
 
       <div class="well">
-        <h1><span class="label label-success"><%= pluralize(@unapproved_spots.count, "Unapproved Spot") %></span></h1>
+        <h1><span class="label label-danger"><%= pluralize(@unapproved_spots.count, "Unapproved Spots") %></span></h1>
         <div class="row spots-list">
           <%= render @unapproved_spots %>
         </div>
