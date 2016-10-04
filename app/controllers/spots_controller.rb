@@ -4,7 +4,8 @@ class SpotsController < ApplicationController
 
   # GET /spots
   def index
-    @spots = current_user.spots.all
+    @approved_spots = current_user.spots.where(approved: true)
+    @unapproved_spots = current_user.spots.where(approved: false)
   end
 
   # GET /spots/1
@@ -25,7 +26,7 @@ class SpotsController < ApplicationController
     @spot = current_user.spots.new(spot_params)
 
     if @spot.save
-      redirect_to spots_path, notice: 'Spot was successfully created.'
+      redirect_to spots_path, notice: 'Requested spot was successfully submitted.'
     else
       render :new
     end
@@ -34,7 +35,7 @@ class SpotsController < ApplicationController
   # PATCH/PUT /spots/1
   def update
     if @spot.update(spot_params)
-      redirect_to spots_path, notice: 'Spot was successfully updated.'
+      redirect_to spots_path, notice: 'Requested spot update was successfully submitted.'
     else
       render :edit
     end
