@@ -15,52 +15,7 @@
 </head>
 
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-fixed-top navbar-wizardspot" role="navigation">
-      <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <%= link_to image_tag('logobyline.svg', size: "600x300"), root_path, class: "navbar-brand" %>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown">
-                          <b class="fa fa-bars fa-2x"></b>
-                          <h5><%= current_user ? current_user.name : "Menu" %></h5>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <% if !current_user %>
-                          <li>
-                            <h5><%= link_to "Login", login_path %></h5>
-                          </li>
-                        <% else %>
-                          <li>
-                            <h5><%= link_to "Logout", logout_path %></h5>
-                          </li>
-                        <% end %>
-                          <li>
-                            <h5><%= link_to "My Spots", spots_path %></h5>
-                          </li>
-                          <li>
-                            <h5><%= link_to "Spot Providers", pages_spotproviders_path %></h5>
-                          </li>
-                          <li>
-                            <h5><%= link_to "How it Works", pages_howitworks_path %></h5>
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+  <%= render 'layouts/nav' %>
 
   <main>
     <div class="container">
@@ -100,6 +55,5 @@
           </span>
       </div>
   </footer>
-<script async src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiI0QTkwRTIiLCJjdXN0b21Db2xvciI6ZmFsc2UsImljb24iOiJidWJibGUiLCJwcm9ub3VuIjoidXMiLCJsYW5ndWFnZSI6ImVuIiwiYnJhbmRlZCI6dHJ1ZSwiaW50cm9UZXh0IjoiSGkhIElmIHlvdSB3YW50IHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgV2l6YXJkIFNwb3RzIG9yIHdvdWxkIGxpa2UgdG8gaGF2ZSBhIHNob3J0IGNoYXQsIHlvdXIgd2lzaCBpcyBvdXIgY29tbWFuZCIsImNoYW5uZWxzIjpbWyJmYWNlYm9vayIsIldpemFyZFNwb3RzIiwic29jaWFsIl0sWyJ0d2l0dGVyIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInNsYWNrIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInBob25lIiwiKDgxMykgNTE2LTg1NDMiLCJjbGFzc2ljIl0sWyJlbWFpbCIsIkluZm9AV2l6YXJkU3BvdHMuY29tIiwiY2xhc3NpYyJdXX0='></script>
 </body>
 </html>

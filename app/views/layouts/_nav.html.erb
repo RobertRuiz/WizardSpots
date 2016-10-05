@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-wizardspot" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to image_tag('logobyline.svg', size: "400x200"), root_path, class: "navbar-brand" %>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="mobile-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <% if current_user %>
+                <li>
+                  <%= link_to "Logout", logout_path %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "Login", login_path %>
+                </li>
+              <% end %>
+              <li>
+                <%= link_to "My Spots", spots_path %>
+              </li>
+              <li>
+                <%= link_to "Spot Providers", pages_spotproviders_path %>
+              </li>
+              <li>
+                <%= link_to "How it Works", pages_howitworks_path %>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
