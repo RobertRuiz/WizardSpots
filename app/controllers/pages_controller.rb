@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class PagesController < ApplicationController
   def index
     return redirect_to spots_path if current_user
   end
