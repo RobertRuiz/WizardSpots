@@ -38,7 +38,7 @@ class SpotsController < ApplicationController
   # PATCH/PUT /spots/1
   def update
     if @spot.update(spot_params)
-      redirect_to spots_path, notice: 'Requested spot update was successfully submitted.'
+      redirect_to spots_path
     else
       render :edit
     end

@@ -9,11 +9,13 @@
         <div class="panel-body">
             <h4><%= spot.name %></h4>
             <p><%= truncate(spot.description,length: 60) %></p>
-              <ul class="button_ops">
+            <ul class="button_ops">
+              <% if spot.approved %>
                 <li><%= link_to "Order Now", order_spot_path(spot), class: "btn btn-primary", method: "post" %></li>
-                <li><%= link_to "Modify this spot", edit_spot_path(spot), class: "btn btn-primary" %></li>
-                <li><%= link_to "Remove this spot", spot_path(spot), { class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } } %></li>
-              </ul>
+              <% end %>
+              <li><%= link_to "Modify this spot", edit_spot_path(spot), class: "btn btn-primary" %></li>
+              <li><%= link_to "Remove this spot", spot_path(spot), { class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } } %></li>
+            </ul>
         </div>
     </div>
 </div>

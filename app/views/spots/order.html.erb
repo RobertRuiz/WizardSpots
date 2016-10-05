@@ -1,1 +1,35 @@
-This is a spot for <%= @spot.name %>
+<div class="sellit">
+  <div class="container">
+    <div class="row spot-request-row">
+      <div class="col-md-3 col-sm-3">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <span class="fa-stack fa-5x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa <%= font_awesome_from_category(@spot.category) %> fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+          <div class="panel-body">
+            <h4><%= @spot.name %></h4>
+            <p><%= truncate(@spot.description,length: 60) %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-9">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h2><%= image_tag('wizard.png') %> Thank you for your order!</h2>
+          </div>
+          <div class="panel-body">
+            <h1>Our Wizards are working busily to fulfill your order</h1>
+
+            <h2>Your "<%= @spot.name %>" has been sent and processed</h2>
+            <h2>More spots = More Convenience, More Free Time</h2>  <small><%= link_to 'Request an additional spot now', new_spot_path, class: "btn btn-primary" %></small>
+
+            <%= link_to "Back", spots_path, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

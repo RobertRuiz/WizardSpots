@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require 'bootstrap'
+//= require 'bootstrap.min'
 //= require 'cable'
 //= require 'drop-down-hover'
 //= require 'carousel'

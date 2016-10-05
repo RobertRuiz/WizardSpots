@@ -33,27 +33,27 @@
               <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown">
-                          <b class="fa fa-bars fa"></b>
-                          <%= current_user ? current_user.name : "Menu" %>
+                          <b class="fa fa-bars fa-2x"></b>
+                          <h5><%= current_user ? current_user.name : "Menu" %></h5>
                       </a>
                       <ul class="dropdown-menu">
-                          <% if !current_user %>
-                            <li>
-                                <%= link_to "Login", login_path %>
-                            </li>
-                          <% else %>
-                            <li>
-                                <%= link_to "Logout", logout_path %>
-                            </li>
-                          <% end %>
+                        <% if !current_user %>
                           <li>
-                              <%= link_to "My Spots", spots_path %>
+                            <h5><%= link_to "Login", login_path %></h5>
+                          </li>
+                        <% else %>
+                          <li>
+                            <h5><%= link_to "Logout", logout_path %></h5>
+                          </li>
+                        <% end %>
+                          <li>
+                            <h5><%= link_to "My Spots", spots_path %></h5>
                           </li>
                           <li>
-                              <%= link_to "Spot Providers", pages_spotproviders_path %>
+                            <h5><%= link_to "Spot Providers", pages_spotproviders_path %></h5>
                           </li>
                           <li>
-                              <%= link_to "How it Works", pages_howitworks_path %>
+                            <h5><%= link_to "How it Works", pages_howitworks_path %></h5>
                           </li>
                       </ul>
                   </li>
@@ -82,7 +82,7 @@
 
   <!-- Footer -->
   <footer class="navbar-default">
-      <div class="container-fluid">
+      <div class="container">
           <span>
               <div class="container footer">
                   <div class="row">
