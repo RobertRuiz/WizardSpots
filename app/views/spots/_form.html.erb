@@ -47,7 +47,7 @@
           <%= link_to 'Back', spots_path, class: "btn btn-default" %>
         </div>
       </div>
-      <div class="spotonitsway">
+      <div class="col-sm-12">
         <p>In order to maintain outstanding quality and full functionality, your spot
            will be promptly reviewed and programmed as requested as soon as possible. </p>
       </div>
@@ -57,7 +57,7 @@
   <div class="col-lg-4">
     <div class="list-group spots-list">
       <p>
-        <h3>Select and modify an exisiting spot: </h3>
+        <h3>Select and modify an existing spot: </h3>
       </p>
       <% SpotTemplate.all.each do |spot_template| %>
         <a href='#' class="list-group-item spot-template" data-spot-template="<%= spot_template.to_json %>">

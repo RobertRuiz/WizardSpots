@@ -1,6 +1,6 @@
 .navbar-wizardspot {
   height: 135px;
-  background-color: #4682B4;
+  background-color: #337ab7;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 .navbar-fixed-bottom {
-  background-color: #4682B4;
+  background-color: #337ab7;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -18,4 +18,10 @@ body {
 
 .navbar-inverse .navbar-nav .dropdown-toggle .menu {
     border: 3px solid #73AD21;
+}
+
+.navbar-brand img {
+  position: relative;
+  top: -100px;
+  left: -32px;
 }

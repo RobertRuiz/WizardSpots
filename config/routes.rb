@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :spots
+  resources :spots do
+    member do
+      post :order
+    end
+  end
+
   root   'pages#welcome'
   get    '/pages/welcome'
   get    '/auth/:provider'          => 'omniauth#auth', as: :auth
@@ -12,6 +17,13 @@ Rails.application.routes.draw do
   get    '/logout' => 'session#destroy'
   get    '/pages/spotproviders'
   get    '/pages/howitworks'
+
+  get    '/pages/publix'
+  get    '/pages/lube'
+  get    '/pages/text'
+  get    '/pages/timesheet'
+  get    '/pages/facebook'
+  get    '/pages/weather'
 
   get '/.well-known/acme-challenge/:id' => 'letsencrypt#challenge'
 end

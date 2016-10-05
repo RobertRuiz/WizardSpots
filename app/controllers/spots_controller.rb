@@ -1,11 +1,14 @@
 class SpotsController < ApplicationController
   before_filter :authenticate!
-  before_action :set_spot, only: [:show, :edit, :update, :destroy]
+  before_action :set_spot, only: [:show, :edit, :update, :destroy, :order]
 
   # GET /spots
   def index
     @approved_spots = current_user.spots.where(approved: true)
     @unapproved_spots = current_user.spots.where(approved: false)
+  end
+
+  def order
   end
 
   # GET /spots/1
