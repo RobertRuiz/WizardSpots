@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Wizard Spots, your wish is our command">
-    <meta name="author" content="Robert S. Ruiz">
-    <title>Wizard Spots</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tag %>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Wizard Spots, your wish is our command">
+        <meta name="author" content="Robert S. Ruiz">
+        <title>Wizard Spots</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= csrf_meta_tag %>
 
-</head>
+    </head>
 
-<body>
-  <%= render 'layouts/nav' %>
+    <body>
+        <%= render 'layouts/nav' %>
 
-  <main>
-    <div class="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do %>
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <%= msg %>
-        <% end %>
-      <% end %>
-    </div>
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-     <%= yield %>
-  </main>
+        <main>
+            <div class="container">
+                <% flash.each do |name, msg| %>
+                <%= content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do %>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <%= msg %>
+                <% end %>
+                <% end %>
+            </div>
+            <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
+            <%= yield %>
+        </main>
 
-  <!-- Footer -->
-  <footer class="navbar-default adam">
-      <div class="container">
-          <span>
-              <div class="container footer">
-                  <div class="row">
-                      <div class="col-lg-10 col-lg-offset-1 text-center">
-                          <hr class="small">
-                          <div class="footer-left">
-                              <p>Copyright © 2016 Wizard Spots
-                                  <%= image_tag('wizard.png', size: "20x30") %>
-                                  All rights reserved.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </span>
-      </div>
-      <!-- Contact Bot -->
-      <script async src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiI0QTkwRTIiLCJjdXN0b21Db2xvciI6ZmFsc2UsImljb24iOiJidWJibGUiLCJwcm9ub3VuIjoidXMiLCJsYW5ndWFnZSI6ImVuIiwiYnJhbmRlZCI6dHJ1ZSwiaW50cm9UZXh0IjoiSGkhIElmIHlvdSB3YW50IHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgV2l6YXJkIFNwb3RzIG9yIHdvdWxkIGxpa2UgdG8gaGF2ZSBhIHNob3J0IGNoYXQsIHlvdXIgd2lzaCBpcyBvdXIgY29tbWFuZCIsImNoYW5uZWxzIjpbWyJmYWNlYm9vayIsIldpemFyZFNwb3RzIiwic29jaWFsIl0sWyJ0d2l0dGVyIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInNsYWNrIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInBob25lIiwiKDgxMykgNTE2LTg1NDMiLCJjbGFzc2ljIl0sWyJlbWFpbCIsIkluZm9AV2l6YXJkU3BvdHMuY29tIiwiY2xhc3NpYyJdXX0='></script>
-  </footer>
-  </body>
+        <!-- Footer -->
+        <footer class="navbar-default adam">
+            <div class="container">
+                <span>
+                    <div class="container footer">
+                        <div class="row">
+                            <div class="col-lg-10 col-lg-offset-1 text-center">
+                                <hr class="small">
+                                <div class="footer-left">
+                                    <p>Copyright © 2016 Wizard Spots
+                                        <%= image_tag('wizard.svg', size: "30x40") %>
+                                        All rights reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <!-- Contact Bot -->
+            <script
+                async
+                src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiI0QTkwRTIiLCJjdXN0b21Db2xvciI6ZmFsc2UsImljb24iOiJidWJibGUiLCJwcm9ub3VuIjoidXMiLCJsYW5ndWFnZSI6ImVuIiwiYnJhbmRlZCI6dHJ1ZSwiaW50cm9UZXh0IjoiSGkhIElmIHlvdSB3YW50IHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgV2l6YXJkIFNwb3RzIG9yIHdvdWxkIGxpa2UgdG8gaGF2ZSBhIHNob3J0IGNoYXQsIHlvdXIgd2lzaCBpcyBvdXIgY29tbWFuZCIsImNoYW5uZWxzIjpbWyJmYWNlYm9vayIsIldpemFyZFNwb3RzIiwic29jaWFsIl0sWyJ0d2l0dGVyIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInNsYWNrIiwiV2l6YXJkU3BvdHMiLCJzb2NpYWwiXSxbInBob25lIiwiKDgxMykgNTE2LTg1NDMiLCJjbGFzc2ljIl0sWyJlbWFpbCIsIkluZm9AV2l6YXJkU3BvdHMuY29tIiwiY2xhc3NpYyJdXX0='></script>
+        </footer>
+    </body>
 </html>
